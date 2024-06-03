@@ -1,0 +1,69 @@
+﻿@using SV20T1020001.Web.AppCodes
+
+@{
+	var userData = User.GetUserData();
+	@if (string.IsNullOrEmpty(userData.Photo))
+		userData.Photo = "nophoto.png";
+	ViewBag.Title = "Thông tin cá nhân";
+}
+<div class="box box-danger">
+	<div class="box-body">
+		<!--enctype="multipart/form-data"  : dung khi update dl anh-->
+
+		<div class="form-group">
+			<label class="control-label col-sm-2">Họ và tên:</label>
+			<div class="col-sm-10">
+				<p class="form-control-static">@userData.DisplayName</p>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label col-sm-2">Email:</label>
+			<div class="col-sm-10">
+				<p class="form-control-static">@userData.Email</p>
+			</div>
+		</div>
+
+
+		<div class="form-group">
+			<label class="control-label col-sm-2">Hình ảnh:</label>
+
+			<img id="Photo" src="~/images/employees/@userData.Photo" class="img img-bordered" style="width:200px" />
+		</div>
+		<form action="~/Account/ChangePassWord" method="post" style="width:500px; padding-left:20px">
+			<input value="@userData.Email" name="Email" type="hidden" />
+			<!--Luu y doi tuong nhap input phai co name-->
+			<div class="form-group">
+				<label>Mật khẩu hiện tại:</label>
+				@if (ViewBag.pass != "")
+				{
+					<input type="text" class="form-control" autofocus name="oldPassword" value="@ViewBag.pass" />
+				}
+				else
+				{
+					<input type="text" class="form-control" autofocus name="oldPassword" />
+				}
+				
+				@Html.ValidationMessage("oldPassword", new { @style = "color:#f00" })
+			</div>
+			<div class="form-group">
+				<label>Mật khẩu mới:</label>
+				<input type="text" class="form-control" name="newPassword" value="@ViewBag.newpass" />
+				@Html.ValidationMessage("newPassword", new { @style = "color:#f00" })
+			</div>
+
+
+			<div class="form-group text-right">
+				<button type="submit" class="btn btn-primary">
+					<i class="fa fa-floppy-o"></i>
+					Lưu dữ liệu
+				</button>
+					<a href="~/Home" class="btn btn-default">
+						Quay lại
+					</a>
+			</div>
+			@Html.ValidationMessage("Error", new { @style = "color:#f00" })
+		</form>
+		
+	</div>
+</div>

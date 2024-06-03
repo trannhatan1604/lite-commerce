@@ -1,0 +1,42 @@
+﻿@model SV20T1020001.DomainModels.Category
+@{
+	ViewBag.Title = "Xoá loại hàng";
+}
+<div class="box box-danger">
+	<div class="box-body">
+		<form action="~/Category/Delete/@Model.CategoryID" method="post">
+			<!--Luu y doi tuong nhap input phai co name-->
+			<div class="form-group">
+				<label>Tên loại hàng hoá:</label>
+				<p class="form-control-static">@Model.CategoryName</p>
+			</div>
+			<div class="form-group">
+				<label>Mô tả hàng:</label>
+				<p class="form-control-static">@Model.Description</p>
+			</div>
+			<div class="form-group">
+				<label>Hình ảnh:</label>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-12">
+					
+					<img id="Photo" src="~/images/categories/@Model.Photo" class="img img-bordered" style="width:200px" />
+				</div>
+			</div>
+			<div class="form-group text-right">
+				@if (ViewBag.AllowDelete)
+				{
+					<button type="submit" class="btn btn-danger">
+						<i class="fa fa-trash-o"></i>
+						Xác nhận xoá
+					</button>
+
+				}
+				<a href="~/Category" class="btn btn-default">
+					Quay lại
+				</a>
+			</div>
+
+		</form>
+	</div>
+</div>

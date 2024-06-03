@@ -1,0 +1,17 @@
+E:\LaptrinhwebProjects\SV20T1020001\SV20T1020001.BusinessLayers\bin\Debug\net6.0\SV20T1020001.BusinessLayers.deps.json
+E:\LaptrinhwebProjects\SV20T1020001\SV20T1020001.BusinessLayers\bin\Debug\net6.0\SV20T1020001.BusinessLayers.dll
+E:\LaptrinhwebProjects\SV20T1020001\SV20T1020001.BusinessLayers\bin\Debug\net6.0\SV20T1020001.BusinessLayers.pdb
+E:\LaptrinhwebProjects\SV20T1020001\SV20T1020001.BusinessLayers\obj\Debug\net6.0\SV20T1020001.BusinessLayers.GeneratedMSBuildEditorConfig.editorconfig
+E:\LaptrinhwebProjects\SV20T1020001\SV20T1020001.BusinessLayers\obj\Debug\net6.0\SV20T1020001.BusinessLayers.AssemblyInfoInputs.cache
+E:\LaptrinhwebProjects\SV20T1020001\SV20T1020001.BusinessLayers\obj\Debug\net6.0\SV20T1020001.BusinessLayers.AssemblyInfo.cs
+E:\LaptrinhwebProjects\SV20T1020001\SV20T1020001.BusinessLayers\obj\Debug\net6.0\SV20T1020001.BusinessLayers.csproj.CoreCompileInputs.cache
+E:\LaptrinhwebProjects\SV20T1020001\SV20T1020001.BusinessLayers\obj\Debug\net6.0\SV20T1020001.BusinessLayers.dll
+E:\LaptrinhwebProjects\SV20T1020001\SV20T1020001.BusinessLayers\obj\Debug\net6.0\refint\SV20T1020001.BusinessLayers.dll
+E:\LaptrinhwebProjects\SV20T1020001\SV20T1020001.BusinessLayers\obj\Debug\net6.0\SV20T1020001.BusinessLayers.pdb
+E:\LaptrinhwebProjects\SV20T1020001\SV20T1020001.BusinessLayers\obj\Debug\net6.0\ref\SV20T1020001.BusinessLayers.dll
+E:\LaptrinhwebProjects\SV20T1020001\SV20T1020001.BusinessLayers\bin\Debug\net6.0\SV20T1020001.DataLayers.dll
+E:\LaptrinhwebProjects\SV20T1020001\SV20T1020001.BusinessLayers\bin\Debug\net6.0\SV20T1020001.DomainModels.dll
+E:\LaptrinhwebProjects\SV20T1020001\SV20T1020001.BusinessLayers\bin\Debug\net6.0\SV20T1020001.DataLayers.pdb
+E:\LaptrinhwebProjects\SV20T1020001\SV20T1020001.BusinessLayers\bin\Debug\net6.0\SV20T1020001.DomainModels.pdb
+E:\LaptrinhwebProjects\SV20T1020001\SV20T1020001.BusinessLayers\obj\Debug\net6.0\SV20T1020001.BusinessLayers.csproj.AssemblyReference.cache
+E:\LaptrinhwebProjects\SV20T1020001\SV20T1020001.BusinessLayers\obj\Debug\net6.0\SV20T1020001.BusinessLayers.csproj.CopyComplete

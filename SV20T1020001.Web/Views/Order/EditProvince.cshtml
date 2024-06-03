@@ -1,0 +1,76 @@
+﻿@model Order
+@{
+    Layout = null;
+}
+<div class="modal-dialog">
+    <div class="modal-content">
+        <form id="formEditProvince" action="~/Order/Update" method="post" class="form-horizontal ">
+            <input type="hidden" name="OrderID" value="@Model.OrderID" />
+            <div class="modal-header bg-
+primary">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Cập nhật địa chỉ </h4>
+            </div>
+            <div class="modal-body">
+                
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Địa chỉ giao hàng:</label>
+                    <div class="col-sm-9">
+                        @Html.TextBoxFor(m => m.DeliveryAddress, new { @class = "form-control" })
+                        
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Tỉnh/ thành giao hàng:</label>
+                    <div class="col-sm-9">
+                        @Html.DropDownListFor(m => m.DeliveryProvince, SelectListHelper.Provinces(), new { @class = "form-control select2" })
+                        
+                    </div>
+                </div>
+                <div class="form-group col-sm-7">
+                    <div id="message" class=" text-danger"></div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa fa-floppy-o"></i> Cập nhật
+                </button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Bỏ qua
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#formEditProvince').submit(function (e) {
+            e.preventDefault();
+
+            var action = $(this).prop("action");
+            var method = $(this).prop("method");
+            var postData = $(this).serializeArray();
+            postData.push({ "name": "orderID", "value": @Model.OrderID});
+            //console.log(action, method, postData);
+            $.ajax({
+                url: action,
+                data: postData,
+                type: method,
+                async: false,
+                error: function () {
+                    alert('Your request is not valid');
+                },
+                success: function (data) {
+                    if (data != "") {
+                        $('#message').html(data);
+                    }
+                    else {
+                        location.reload();
+                    }
+                }
+            });
+            return;
+        });
+    });
+</script>
